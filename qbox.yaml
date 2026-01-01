@@ -70,6 +70,12 @@ tasks:
     dest: ./resources/[standalone]/mhacking
     ref: main
     src: https://github.com/qbox-project/mhacking
+    
+    # Bridge for mm_radio
+  - action: download_github
+    dest: ./resources/[standalone]/bl_bridge
+    ref: main
+    src: https://github.com/Byte-Labs-Studio/bl_bridge
 
   - action: waste_time # prevent github throttling
     seconds: 10
