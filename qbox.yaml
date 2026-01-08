@@ -213,7 +213,7 @@ tasks:
     ref: main
     src: https://github.com/qbox-project/qbx_vehiclesales
   - action: query_database
-    file: ./resources/[qbx]/qbx_vehiclesales/qb-vehiclesales.sql
+    file: ./resources/[qbx]/qbx_vehiclesales/qbx_vehiclesales.sql
 
   - action: download_github
     dest: ./resources/[qbx]/qbx_vehicleshop
@@ -241,8 +241,6 @@ tasks:
     dest: ./resources/[qbx]/qbx_management
     ref: main
     src: https://github.com/qbox-project/qbx_management
-  - action: query_database
-    file: ./resources/[qbx]/qbx_management/qbx_management.sql
 
   - action: download_github
     dest: ./resources/[qbx]/qbx_weed
@@ -256,7 +254,7 @@ tasks:
     ref: main
     src: https://github.com/qbox-project/qbx_lapraces
   - action: query_database
-    file: ./resources/[qbx]/qbx_lapraces/qb-lapraces.sql
+    file: ./resources/[qbx]/qbx_lapraces/qbx_lapraces.sql
 
   - action: download_github
     dest: ./resources/[qbx]/qbx_garages
@@ -331,12 +329,10 @@ tasks:
     ref: main
     src: https://github.com/qbox-project/qbx_spawn
 
-  - action: download_file
-    path: ./tmp/qbx_smallresources.zip
-    url: https://github.com/qbox-project/qbx_smallresources/releases/latest/download/qbx_smallresources.zip
-  - action: unzip
-    dest: ./resources/[qbx]
-    src: ./tmp/qbx_smallresources.zip
+  - action: download_github
+    dest: ./resources/[qbx]/qbx_smallresources
+    ref: main
+    src: https://github.com/qbox-project/qbx_smallresources
 
   - action: download_github
     dest: ./resources/[qbx]/qbx_recyclejob
